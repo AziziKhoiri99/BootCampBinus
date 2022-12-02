@@ -1,0 +1,11 @@
+const url = new URL('https://user:pass@site.com:80/pa/th/?q=val#hash');
+// console.log(url.href);
+console.log(url.protocol);
+console.log(url.username);
+console.log(url.password);
+// console.log(url.host);
+console.log(url.hostname);
+console.log(url.port);
+console.log(url.pathname);
+console.log(url.search);
+console.log(url.hash);

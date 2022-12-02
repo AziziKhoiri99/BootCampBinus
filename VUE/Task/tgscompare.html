@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Compare || Azizi</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<style>
+    a {
+        text-decoration: none;
+        color: black;
+    }
+</style>
+<body>
+    <template id="numb-template">
+        <div>
+            <h2>Ini merupakan Input Number</h2>
+            <input v-model.number="msg1" type="number"><br>
+            <p>{{ msg1 }}</p><br>
+        </div>
+    </template>
+    <template id="trim-template">
+        <div>
+            <h2>Ini merupakan Input Trim</h2>
+            <input v-model.trim="msg"><br>
+            <p>{{ msg }}</p><br>
+        </div>
+    </template>
+    <template id="lazy-template">   
+        <div>
+            <h2>Ini merupakan Input Lazy</h2>
+            <input v-model.lazy="msg2"><br>
+            <p>{{ msg2 }}</p><br>   
+        </div>
+    </template>
+    <div id="app">
+        <component :is="currentView" keep-alive></component>
+        <button @click="currentView='numb'" keep-alive>Tombol Number</button><br><br>
+        <button @click="currentView='trim'" keep-alive>Tombol Trim</button><br><br>
+        <button @click="currentView='lazy'" keep-alive>Tombol Lazy</button><br><br>
+    </div>
+    <script>
+        Vue.component('numb', {
+            template: '#numb-template',
+            data() {
+                return  {
+                msg1: ''
+                }
+            }
+        });
+
+        Vue.component('trim', {
+            template: '#trim-template',
+            data() {
+                return {
+                    msg: ''
+                }
+            },
+        })
+
+        Vue.component('lazy', {
+            template: '#lazy-template',
+            data() {
+                return {
+                    msg2: ''
+                }
+            }
+        })
+
+        new Vue({
+            el: '#app',
+            data: {
+                currentView: 'numb'
+            }
+        })
+    </script>
+</body>
+</html>

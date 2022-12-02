@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JS 5 || Azizi</title>
+</head>
+<body>
+    <h3>Bilangan Genap dari 10 - 100</h3>
+    <p id="a"></p>
+    <h3>Bilangan Menurun dari 50 - 0</h3>
+    <p id="b"></p>
+
+    <script>
+    let text = "";
+    let text2 = "";
+
+    for (let i = 10; i <= 100; i = i + 2) {
+    text += "Nilai Ke- " + i + "<br>";
+    }
+
+    for (let i = 50; i >= 0; i--) {
+    text2 += "Nilai Ke- " + i + "<br>";
+    }
+
+    document.getElementById("a").innerHTML = text;
+    document.getElementById("b").innerHTML = text2;
+
+            // var newHTML = '<div id="title-text"> \
+        //     Logika For Dengan Mobil BMW \
+        // </div> \
+        // <div id="choices"> \
+        //     <ul> \
+        //         <li id="home"><a href="#">Home</a></li> \
+        //         <li id="contact"><a href="#">Contact</a></li> \
+        //         <li id="about"><a href="#">About</a></li> \
+        //         <!-- 5 more items --> \
+        //     </ul> \
+        // </div>';
+
+
+
+        // document.getElementById("top").innerHTML = newHTML;
+
+        // document.getElementById("contact").className = "highlight";
+        // document.getElementById("about").setAttribute("class", "highlight2");
+        // document.getElementById("home").setAttribute("className", "highlight3");
+    </script>
+</body>
+</html>

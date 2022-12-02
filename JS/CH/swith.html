@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Tugas JS 4</title>
+</head>
+<style>
+    * {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    body {
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 20px;
+    }
+    fieldset {
+        background-color: white;
+        border-top: 10px double blue; 
+        border-bottom: 5px dashed red;
+    }
+    legend {
+        background-image:
+            linear-gradient(90deg, red, blue);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    input {
+        outline: 0;
+        border-width: 0 0 2px;
+        border-color: black
+    }
+
+    input:focus {
+        border-color: black
+    }
+</style>
+
+<body>
+    <fieldset>
+        <legend>Pilih Character</legend>
+        <div>
+            <p id="game"> Output</p>
+        </div>
+        <div>
+            <input id="name" type="text" placeholder="Username">
+        </div>
+        <br><br>
+        <div>
+            <input id="role" type="text" placeholder="Role" list="role-list">
+            <datalist id="role-list">
+                <option value="Ksatria"></option>
+                <option value="Tabib"></option>
+                <option value="Penyihir"></option>
+            </datalist>
+        </div>
+        <br><br>
+        <button type="submit" onclick="myFunction()">Submit</button>
+        <br><br>
+        <div>
+            <label for="">Loading.....</label>
+        </div>
+        <progress></progress>
+    </fieldset>
+    <script>
+        function myFunction() {
+            let name = document.getElementById("name").value;
+            let role = document.getElementById("role").value;
+
+            if (!name && !role) {
+                document.getElementById("game").innerHTML = "Nama Harus Diisi !!!"
+            } else if (name == name && !role) {
+                document.getElementById("game").innerHTML = "Halo " + name + ", Pilih rolemu untuk memulai game.";
+            } else if (name == name && role == "Ksatria") {
+                document.getElementById("game").innerHTML =
+                    "Selamat Datang di Dunia Proxytia, " + name + "<br>" +
+                    "Halo Ksatria " + name + ", kamu dapat menyerang dengan senjatamu.";
+            } else if (name == name && role == "Tabib") {
+                document.getElementById("game").innerHTML =
+                    "Selamat Datang di Dunia Proxytia, " + name + "<br>" +
+                    "Halo Tabib " + name + ", kamu akan membantu temanmu yang terluka.";
+            } else if (name == name && role == "Penyihir") {
+                document.getElementById("game").innerHTML =
+                    "Selamat Datang di Dunia Proxytia, " + name + "<br>" +
+                    "Halo Penyihir " + name + ", ciptakan keajaiban yang membantu kemenanganmu.";
+            } else {
+                document.getElementById("game").innerHTML = "Maaf, tolong koreksi kembali data anda."
+            } 
+        }
+    </script>
+</body>
+
+</html>

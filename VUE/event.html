@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="ex">
+        <button v-on:click="cou += 1">Add 1</button>
+        <p>The button {{ cou }} </p>
+    </div>
+    <div id="example-2">
+        <button v-on:click="greet">Push</button>
+    </div><br>
+    <div id="contoh-3">
+        <button v-on:click="say('HELLO MOTHERFVCKER')">Katakan hi</button>
+        <button v-on:click="say('WHAT THE FVCK !!!')">Katakan what</button>
+        <button v-on:click="say('FVCK YOU NIGGA !!!')">Say N-Word</button>
+      </div>
+    <script>
+        var ex = new Vue({
+            el: '#ex',
+            data: {
+                cou: 0
+            }
+        })
+
+        var example2 = new Vue({
+            el: '#example-2',
+            data: {
+                name: 'Tai'
+            },
+            methods: {
+                greet: function (event) {
+                    alert('Halo ' + this.name + '!')
+                    if (event) {
+                        alert(event.target.tagName)
+                    }
+                }
+            }
+        })  
+
+        new Vue({
+        el: '#contoh-3',
+        methods: {
+            say: function (message) {
+            alert(message)
+            }
+        }
+        })
+    </script>
+</body>
+
+</html>

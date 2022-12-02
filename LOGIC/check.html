@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Validasi Isian Form</h1>
+    <form>
+       <fieldset>
+        <legend>Formulir Pendaftaran</legend>
+        Nama Lengkap:<br>
+          <input type="text" name="nama" required><br>
+        Alamat Email:<br>
+          <input type="email" name="email" required><br>
+        Sandi:<br>
+          <input type="password" name="sandi1" required><br>
+        Sandi (ulangi):<br>
+          <input type="password" name="sandi2" required><br>
+        Masukkan alamat blog:<br>
+          <input type="url" name="alamat_url" required><br>
+        Silahkan ketik kata kunci:<br>
+          <input type="search" name="cari"><br>
+        Tanggal Lahir:<br>
+          <input type="date" name="tgl_lahir" required><br>
+      <br>
+          <input type="submit" value="Kirim">
+     </fieldset>   
+    </form>
+    <!-- <p id="a"></p> -->
+
+    <script>
+        // let p = 1, l = 1.5, s = 0.6,
+        //     Le = p * l, vol = s * s * s;
+        // document.getElementById("a").innerHTML =
+        //     "Jadi luas persegi panjang adalah " + Le + " m. <br>" +
+        //     "dan volume kubus adalah " + vol + " m";
+
+        var jawab = prompt("Silahkan pilih roti yang anda suka ??? ");
+        var hadiah = "";
+
+        switch (jawab) {
+            case "1":
+                hadiah = "Sari Roti";
+                break;
+            case "2":
+                hadiah = "Mr. Bread";
+                break;
+            case "3":
+                hadiah = "BreadTalk";
+                break;
+            case "4":
+                hadiah = "Holland Bakery";
+                break;
+            case "5":
+                hadiah = "Roti'O";
+                break;
+            case "6":
+                hadiah = "RotiBoy";
+                break;
+            case "7":
+                hadiah = "BreadLife";
+                break;
+            case "8":
+                hadiah = "Komugi";
+                break;
+            case "9":
+                hadiah = "Yamazaki";
+                break;
+            case "10":
+                hadiah = "Barby's Bakery";
+                break;
+            default:
+                document.write("<p>Maaf, kami kehabisan stok untuk merk tersebut</p>");
+        }
+
+        if (hadiah === "") {
+            document.write("<p>Mohon koreksi kembali pesanan !!!</p>");
+        } else {
+            document.write("<h2>Silahkan diambil pesanan nya, 1 pacs '" + hadiah + "'</h2>" + 
+                            "<h3>Terima Kasih telah berbelanja di Toko Suka Jaya</h3>");
+        }
+    </script>
+</body>
+
+</html>

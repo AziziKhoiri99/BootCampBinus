@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: grab;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown:hover .dropbtn {
+        background-color: #3e8241;
+    }
+    div.static {
+        position: static;
+        border: 3px solid #73ad21;
+    }
+    div.relative {
+        position: relative;
+        left: 30px;
+        border: 3px solid #73ad21;
+    }
+    div.fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        border: 3px solid #73ad21;
+    }
+    div.relative2 {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 3px solid #73ad21;
+    }
+    div.absolute {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        height: 100px;
+        border: 3px solid #73ad21;
+    }
+    div.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        padding: 5px;
+        background-color: #cae8ca;
+        border: 2px solid3 #4CAF50;
+    }
+    ul.a {
+        list-style-type: circle;
+    }
+
+    ul.c {
+        list-style-type: upper-roman;
+    }
+
+    ol.b {
+        list-style-type: square;
+    }
+
+    ol.d {
+        list-style-type: lower-alpha;
+    }
+
+    .bitch {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .hoes {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .thot {
+        font-family: 'Lucida Console', 'Courier New', monospace;
+    }
+</style>
+
+<body>
+    <h2>Hoverable Drop</h2>
+    <p>Move the mouse over</p>
+    <div class="dropdown">
+        <button class="dropbtn">dropdown</button>
+        <div class="dropdown-content">
+            <a href="#">Cocaine</a>
+            <a href="#">Codaine</a>
+            <a href="#">Coffe</a>
+        </div>
+        <!-- <span>Mouse over me</span>
+        <div class="dropdown-content">
+            <p>Hello World</p> -->
+        </div>
+    </div>
+    <p>Try to <b>scroll</b> inside this frame</p>
+    <div class="sticky">i am sticky</div>
+    <div>
+        <p>Dalam contoh ini, </p>
+    </div>
+    <h2>position static</h2>
+    <p>elemen dgn posisi</p>
+    <div class="static">
+        this div element static
+    </div>
+    <div class="relative">
+        this div element relative
+    </div>
+    <div class="fixed">
+        this div element fixed
+    </div>
+    <div class="relative2">
+        this div element relative 2
+    </div>
+    <div class="absolute">
+        this div element absolute
+    </div>
+    <h2>The list-style-type Property</h2>
+
+    <p>Example of unordered lists:</p>
+    <ul class="a">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+
+    <ul class="b">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+
+    <p>Example of ordered lists:</p>
+    <ol class="c">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+
+    <ol class="d">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+    <p>Some Font Awesome:</p>
+    <i class="fas fa-cloud"></i>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-car"></i>
+    <i class="fas fa-file"></i>
+    <i class="fas fa-bars"></i>
+    <p>Styled fa (size):</p>
+    <i class="fas fa-cloud" style="font-size: 24px;"></i>
+    <i class="fas fa-cloud" style="font-size: 36px;"></i>
+    <i class="fas fa-cloud" style="font-size: 48px; color: red;"></i>
+    <i class="fas fa-cloud" style="font-size: 60px; color: lightblue;"></i>
+    <br>
+    <h1>CSS font-family</h1>
+    <p class="bitch">Times New Roman</p>
+    <p class="hoes">Arial</p>
+    <p class="thot">Lucida Console</p>
+</body>
+
+</html>

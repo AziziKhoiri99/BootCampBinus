@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UlanganJs || Azizi</title>
+</head>
+<style>
+    #e {
+        color: red;
+    }
+    #f {
+        color: yellow;
+    }
+</style>
+<body>
+    <h3>Ulangan Javascript</h3>
+    <ol>
+        <li> Buatlah logika menggunakan If Else:</li>
+        <ul>
+            <li>Jika 2 warna berarti : Kaca Mata</li>
+            <li>Jika 3 warna berarti : Lamlin</li>
+            <li>Jika lebih dari sama dengan 7 warna berarti :Pelangi</li>
+            <li>Jika lebih dari sama dengan 10 warna berarti : Crayon</li>
+        </ul>
+        <p>Jawaban:
+            <span id="a"></span>
+        </p>
+        <li> Buatlah Switch : untuk suatu definisi dari golongan rantai makanan :</li>
+        <ol>
+            <li>Herbivora</li>
+            <li>Karnivora</li>
+            <li>Omnivora</li>
+        </ol>
+        <p>Jawaban:
+            <span id="b"></span>
+        </p>
+        <li>Ganti nama-nama di Lirik lagu ini dengan menggunakan Variable: <br>
+            " Dinda jangan marah-marah, nanti takut lekas tua, Kanda orang yang setia, tak kan pernah mendua "
+        </li>
+        <p>Jawaban:
+            <span id="cd"></span>
+        </p>
+        <li>Buatkan perulangan : <br>
+            10 mobil BMV, jika ganjil berwarna merah jika genap berwarna kuning
+        </li>
+        <p>Jawaban:
+            <span id="e"></span>
+        </p>
+    </ol>
+
+    <script>
+        // Soal 1 = Logika If Else
+        let a = 9;
+        if (a === 2) {
+            document.getElementById("a").innerHTML = "Kaca Mata"
+        } else if (a === 3) {
+            document.getElementById("a").innerHTML = "Lamlin"
+        } else if (a >= 7 && a < 10) {
+            document.getElementById("a").innerHTML = "Pelangi"
+        } else {
+            document.getElementById("a").innerHTML = "Crayon"
+        }
+
+        // Soal 2 = Logika Switch
+        const b = "Karnivora";
+        switch (b) {
+            case "Herbivora":
+                document.getElementById("b").innerHTML = "Herbivor, pemakan tumbuhan, atau lataboga dalam zoologi adalah hewan yang hanya makan tumbuhan dan tidak memakan daging. Manusia tidak termasuk herbivora. Akan tetapi, orang yang memilih untuk tidak memakan daging disebut vegetarian."
+                break;
+            case "Karnivora":
+                document.getElementById("b").innerHTML = "Karnivora merupakan pemakan daging. Hewan yang masukkedalam golongan karnivor karena memangsa hewan lain, hewan ini juga disebut sebagai predator. Predator mendapatkan mangsanya dengan memburu mangsanya itu.";
+                break;
+            case "Omnivora":
+                document.getElementById("b").innerHTML = "Omnivor, pemakan segala, atau sarwaboga adalah spesies yang memakan tumbuhan dan hewan sebagai sumber makanan pokoknya. Babi adalah contoh omnivor yang dikenal secara luas."
+                break;
+        }
+
+        // Soal 3 = Logika Variable
+        let c = "Dinda";
+        let d = "Kanda";
+
+        document.getElementById("cd").innerHTML =
+            '"' + c + ' jangan marah-marah, nanti takut lekas tua, ' + d + ' orang yang setia, tak kan pernah mendua."';
+        console.log('"' + c + ' jangan marah-marah, nanti takut lekas tua, ' + d + ' orang yang setia, tak kan pernah mendua."');
+        alert('"' + c + ' jangan marah-marah, nanti takut lekas tua, ' + d + ' orang yang setia, tak kan pernah mendua."')
+
+        //Soal 4 = Logika For
+        let text = "";
+
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 == 1) {
+                text += '<span id="e"> Mobil ' + i + ', </span>';
+            }
+            else if (i % 2 == 0) {
+                text +=  '<span id="f"> Mobil ' + i + ', </span>';
+            }
+        }
+        document.getElementById("e").innerHTML = text;
+    </script>
+</body>
+
+</html>

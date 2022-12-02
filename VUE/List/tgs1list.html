@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas List 1 || Azizi </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body style="border: 2px solid black; width: 13rem">
+    <ol id="example-1" type="A" start="6">
+        <li v-for="item in items" :key="item.message">
+            {{ item.buah }}
+        </li>
+    </ol>
+    <script>
+        var example1 = new Vue({
+            el: '#example-1',
+            data: {
+                items: [
+                    { buah: 'Apel' },
+                    { buah: 'Semangka' },
+                    { buah: 'Jeruk' },
+                    { buah: 'Melon' },
+                    { buah: 'Pepaya' }]
+            }
+        })
+    </script>
+</body>
+</html>

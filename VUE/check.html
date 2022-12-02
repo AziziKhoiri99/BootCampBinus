@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<style>
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .box {
+        background-image: url("https://i.pinimg.com/736x/f6/0b/85/f60b856b035e1636a52ffc72bc2ece84.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 5px dotted red;
+        width: 30rem;
+        aspect-ratio: 1 / 1;
+        margin: auto;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    p {
+        color: white;
+    }
+
+    /* p.a {
+        border: 2px solid white;
+        height: 20px;
+    } */
+</style>
+
+<body>
+    <div id="x">
+        <select v-model="selected">
+            <option disabled value="">Please select one</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+          </select>
+          <span>Selected: {{ selected }}</span>
+    </div>
+    <div id="z">
+        <input type="radio" id="one" value="One" v-model="picked">
+        <label for="one">One</label>
+        <br>
+        <input type="radio" id="two" value="Two" v-model="picked">
+        <label for="two">Two</label>
+        <br>
+        <span>Picked: {{ picked }}</span>
+    </div>
+    <div id="b">
+        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <br>
+        <span>Checked names: {{ checkedNames }}</span>
+    </div>
+    <div id="app">
+        <!-- <input type="text" v-model="texty"> -->
+        <textarea v-model="texty" placeholder="add multiple lines" cols="100" rows="5"></textarea>
+        <input type="checkbox" id="checkbox" v-model="texty">
+        <label for="checkbox">{{ texty }}</label>
+        <div class="box">
+            <p>Jawabanmu Adalah</p>
+            <!-- <p class="a">{{ texty }}</p> -->
+            <textarea cols="30" rows="10" class="a">
+                {{ texty }}
+            </textarea>
+        </div>
+    </div>
+    <!-- <div id="hook-arguments-example" v-demo:foo.a.b="message"></div>
+    <div id="dynamicexample">
+        <h3>Scroll down inside this section ↓</h3>
+        <p v-pin:[direction]="200">I am pinned onto the page at 200px to the left.</p>
+    </div> -->
+    <script>
+       new Vue({
+            el: '#x' ,
+            data: {
+                selected: []
+            }
+        })
+        new Vue({
+            el: '#b',
+            data: {
+                checkedNames: []
+            }
+        })
+        new Vue({
+            el: '#z',
+            data: {
+                picked: ''
+            }
+        })
+        var vo = new Vue({
+            el: "#app",
+            data: {
+                texty: ""
+            },
+        })
+        Vue.directive('demo', {
+            bind: function (el, binding, vnode) {
+                var s = JSON.stringify
+                el.innerHTML =
+                    'name: ' + s(binding.name) + '<br>' +
+                    'value: ' + s(binding.value) + '<br>' +
+                    'expression: ' + s(binding.expression) + '<br>' +
+                    'argument: ' + s(binding.arg) + '<br>' +
+                    'modifiers: ' + s(binding.modifiers) + '<br>' +
+                    'vnode keys: ' + Object.keys(vnode).join(', ')
+            }
+        })
+        new Vue({
+            el: '#hook-arguments-example',
+            data: {
+                message: 'Hello!'
+            }
+        })
+        Vue.directive('pin', {
+            bind: function (el, binding, vnode) {
+                el.style.position = 'fixed'
+                var s = (binding.arg == 'left' ? 'left' : 'top')
+                el.style[s] = binding.value + 'px'
+            }
+        })
+
+        new Vue({
+            el: '#dynamicexample',
+            data: function () {
+                return {
+                    direction: 'left'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

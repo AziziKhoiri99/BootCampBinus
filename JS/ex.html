@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Tutorial</title>
+</head>
+
+<body>
+    <button onclick="tgs()">My Name</button>
+    <!-- <p id="h"></p>
+    <p id="i"></p>
+    <p id="j"></p>
+    <p id="k"></p> -->
+    <p id="l"></p>
+    <p id="m"></p>
+    <p id="n"></p>
+    <p id="o"></p>
+    <p id="p"></p>
+    <p id="q"></p>
+    <h2>Javascript Pertama</h2>
+    <button onclick="b()">
+        Klik saya untuk tau tgl
+    </button>
+    <p id="njir"></p>
+
+    <h2>Javascript Do ?</h2>
+    <p id="a">Ganti Kalimat</p>
+    <button onclick="b()">
+        Ganti Kalimat
+    </button>
+
+    <p id="b">Ganti Style CSS</p>
+    <button onclick="e()">
+        Ganti Font
+    </button>
+
+    <p id="c">Hilangkan Kalimat</p>
+    <button onclick="c()">
+        Hilang
+    </button>
+
+    <p id="d" style="display: none;">Munculkan Kalimat</p>
+    <button onclick="d()">
+        Tampil
+    </button>
+
+    <p><b>Tugas</b></p>
+    <p id="e">Azizi Khoiri</p>
+    <button onclick="d()">
+        Tampil
+    </button>
+    <button onclick="c()">
+        Hilang
+    </button>
+
+    <h2>Javascript Head</h2>
+    <p id="f">Paragraf</p>
+    <button onclick="bruh()">Coba lah</button>
+    <p id="g"></p>
+    <button onclick="a()">Coba</button>
+
+    <p>Klik tombol utk print halaman</p>
+    <button onclick="window.print()">Print</button>
+
+    <p id="123"></p>
+
+    <script src="ex.js"></script>
+    <script>
+        let x = 6;
+        let y = 5;
+        let z = 21;
+        let azz = 1;
+        
+        document.getElementById("l").innerHTML = z + azz;
+        document.getElementById("m").innerHTML = z - azz;
+        document.getElementById("n").innerHTML = z * azz;
+        document.getElementById("o").innerHTML = z / azz;
+
+        try {
+            const PI = 3.149837373689182012;
+            PI = 3.14
+        } catch (err) {
+            document.getElementById("p").innerHTML = err
+        }
+
+        const  q = 10;
+        {  
+            const q = 2;
+        }
+
+        let def = 5 + 5,
+        duf = "5" + 5,
+        daf = "Hello" + 5;
+        document.getElementById("q").innerHTML = "x is " + q;
+        document.getElementById("123").innerHTML = 
+            def + "<br>" + duf + "<br>" + daf;
+
+        // document.getElementById("g").innerHTML = 5 + 6;
+        // document.getElementById("h").innerHTML = 10.50;
+        // document.getElementById("i").innerHTML = x;
+        // document.getElementById("j").innerHTML = (5 + 6) * 10;
+        // document.getElementById("k").innerHTML = x + y;
+        window.alert(5 + 6);
+        console.log(5 + 6);
+    </script>
+</body>
+
+</html>

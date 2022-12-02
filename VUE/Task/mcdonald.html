@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document || Azizi</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<style>
+    body {
+        margin: 20px 20rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    header,
+    footer {
+        text-align: center;
+    }
+
+    h2,
+    footer,
+    section,
+    .d {
+        border: 2px solid goldenrod;
+        padding: 10px;
+    }
+
+    .a {
+        font-weight: bold;
+        font-size: large;
+    }
+</style>
+<body>
+    <header>
+        <img src="https://pbs.twimg.com/media/CQTxxu-UwAAnQiv.jpg" alt="Paket Hemat Big Mac, Medium" width="auto">
+        <p class="d"><span class="a">Paket Hemat Big Mac, Medium</span><span style="float: right;"><span
+                    class="a">48.500</span><sub>Harga dasar</sub> </span></p>
+    </header>
+    <section>
+        <span>Select Medium Drink <sub>Pilih 1</sub></span><br>
+        <div id="z">
+            <input type="radio" value="Medium Coca Cola" v-model="picked">
+            <label for="one">Medium Coca Cola <span style="float: right;">0</span></label>
+            <hr>
+            <input type="radio" value="Medium Fanta" v-model="picked">
+            <label for="two">Medium Fanta <span style="float: right;">0</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Medium Sprite" v-model="picked">
+            <label for="two">Medium Sprite <span style="float: right;">0</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Medium Fruit Tea Lemon " v-model="picked">
+            <label for="two">Medium Fruit Tea Lemon <span style="float: right;">0</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Iced Lychee Tea" v-model="picked">
+            <label for="two">Iced Lychee Tea <span style="float: right;">+8.500</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Large Coca Cola" v-model="picked">
+            <label for="two">Large Coca Cola <span style="float: right;">+2.000</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Large Fanta" v-model="picked">
+            <label for="two">Large Fanta <span style="float: right;">+2.000</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Large Sprite" v-model="picked">
+            <label for="two">Large Sprite <span style="float: right;">+2.000</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Fruit Tea Lemon Large" v-model="picked">
+            <label for="two">Fruit Tea Lemon Large <span style="float: right;">+2.000</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Tehbotol Tawar" v-model="picked">
+            <label for="two">Tehbotol Tawar <span style="float: right;">0</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Tehbotol Kotak" v-model="picked">
+            <label for="two">Tehbotol Kotak <span style="float: right;">0</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Bottled Mineral Water" v-model="picked">
+            <label for="two">Bottled Mineral Water <span style="float: right;">0</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Fruit Tea Blackcurrant" v-model="picked">
+            <label for="two">Fruit Tea Blackcurrant <span style="float: right;">0</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Country Choice Orange" v-model="picked">
+            <label for="two">Country Choice Orange <span style="float: right;">+2.000</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Milo Medium" v-model="picked">
+            <label for="two">Milo Medium <span style="float: right;">+4.500</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Milo Regular" v-model="picked">
+            <label for="two">Milo Regular <span style="float: right;">+1.500</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Fanta Float" v-model="picked">
+            <label for="two">Fanta Float <span style="float: right;">+1.000</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Coke Float" v-model="picked">
+            <label for="two">Coke Float <span style="float: right;">+1.000</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Iced Coffee Float" v-model="picked">
+            <label for="two">Iced Coffee Float <span style="float: right;">+9.000</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Iced Coffee" v-model="picked">
+            <label for="two">Iced Coffee <span style="float: right;">+6.000</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Iced Coffee Jelly" v-model="picked">
+            <label for="two">Iced Coffee Jelly <span style="float: right;">+8.000</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Iced Coffee Jelly Float" v-model="picked">
+            <label for="two">Iced Coffee Jelly Float <span style="float: right;">+11.000</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Hot Coffee" v-model="picked">
+            <label for="two">Hot Coffee <span style="float: right;">0</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Hot Tea" v-model="picked">
+            <label for="two">Hot Tea <span style="float: right;">0</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Coffee with Milk" v-model="picked">
+            <label for="two">Coffee with Milk <span style="float: right;">0</span></label>
+            <br>
+            <hr>
+            <input type="radio" value="Tea with Milk" v-model="picked">
+            <label for="two">Tea with Milk <span style="float: right;">0</span></label>
+            <br><br>
+
+            <span>Remove from Big Mac <sub>Tidak wajib, maks 6</sub></span><br>
+            <div>
+                <input type="checkbox" value="No Beef Patty" v-model="checkedNames">
+                <label>No Beef Patty <span style="float: right;">0</span></label><br>
+                <hr>
+                <input type="checkbox" value="No Cheese Slice" v-model="checkedNames">
+                <label>No Cheese Slice <span style="float: right;">0</span></label><br>
+                <hr>
+                <input type="checkbox" value="No Pikle" v-model="checkedNames">
+                <label>No Pikle <span style="float: right;">0</span></label><br>
+                <hr>
+                <input type="checkbox" value="No Lettuce" v-model="checkedNames">
+                <label>No Lettuce <span style="float: right;">0</span></label><br>
+                <hr>
+                <input type="checkbox" value="No Onion" v-model="checkedNames">
+                <label>No Onion <span style="float: right;">0</span></label><br>
+                <hr>
+                <input type="checkbox" value="No Bigmac Sauce" v-model="checkedNames">
+                <label>No Bigmac Sauce <span style="float: right;">0</span></label><br>
+            </div><br>
+
+            <span>Extra for Big Mac <sub>Tidak wajib, maks 8</sub></span><br>
+            <div>
+                <input type="checkbox" value="Extra Beef Patty" v-model="beef">
+                <label>Extra Beef Patty <span style="float: right;">+12.000</span></label><br>
+                <hr>
+                <input type="checkbox" value="Extra Cheese Slice" v-model="beef">
+                <label>Extra Cheese Slice <span style="float: right;">+7.000</span></label><br>
+                <hr>
+                <input type="checkbox" value="Extra Pickle" v-model="beef">
+                <label>Extra Pickle <span style="float: right;">+1.000</span></label><br>
+                <hr>
+                <input type="checkbox" value="Extra Onion" v-model="beef">
+                <label>Extra Onion <span style="float: right;">+1.000</span></label><br>
+                <hr>
+                <input type="checkbox" value="Extra Bigmac Sauce" v-model="beef">
+                <label>Extra Bigmac Sauce <span style="float: right;">+1.000</span></label><br>
+                <hr>
+                <input type="checkbox" value="Add Beef Sauce" v-model="beef">
+                <label>Add Beef Sauce <span style="float: right;">+14.000</span></label><br>
+                <hr>
+                <input type="checkbox" value="Plain" v-model="beef">
+                <label>Plain <span style="float: right;">0</span></label><br>
+            </div><br>
+
+            <footer>
+                <h3>Tambah Ke Keranjang - 48.500</h3>
+                <p>Medium Drink : {{ picked }}</p>
+                <p>Remove from Big Mac : {{ checkedNames }}</p>
+                <p>Extra for Big Mac : {{ beef }}</p>
+            </footer>
+    </section>
+    <script>
+        new Vue({
+            el: '#z',
+            data: {
+                picked: '',
+                checkedNames: [],
+                beef: []
+            }
+        })
+    </script>
+</body>
+
+</html>

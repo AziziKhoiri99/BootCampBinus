@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<style>
+    .box {
+        background: lightblue;
+        width: 25rem;
+        aspect-ratio: 1 / 1;
+        margin: auto;
+        border-radius: 5%;
+        text-align: center;
+    }
+    h3 {
+        padding-top: 100px;
+    }
+    p {
+        color: red
+    }
+    input{
+        width: 15rem;
+        text-align: center;
+        height: 40px;
+        border-radius: 15px;
+        border: none
+    }
+</style>
+<body>
+    <div class="box" id="c">
+        <h3>Selamat Datang di Aplikasi Reverse Kata</h3>
+        <p>{{ pesanTerbalik }}</p>
+        <input v-model="pesan" v-focus>
+    </div>
+    <div id="b">
+        <p>{{ pesanTerbalik }}</p>
+        <p>{{ pesanTerbalik2 }}</p>
+    </div>
+    <div id="a">
+        <p>{{ pesanTerbalik }}</p>
+        <input v-model="pesan">
+    </div>
+    <script>
+        var a = new Vue({
+          el: '#a',
+          data: {
+            pesan: 'Hello Everyone!!!'
+          },
+          computed: {
+            pesanTerbalik: function() {
+              return this.pesan.split('').reverse().join('')
+            }
+          }
+        })
+        var b = new Vue({
+          el: '#b',
+          data: {
+            pesan: 'remmargorp pmactooB',
+            pesan2: 'Oktober Rain'
+          },
+          computed: {
+            pesanTerbalik: function() {
+              return this.pesan.split('').reverse().join('')
+            },
+            pesanTerbalik2: function() {
+              return this.pesan2.split('').reverse().join('')
+            }
+          }
+        })
+        var c = new Vue({
+          el: '#c',
+          data: {
+            pesan: 'Hello Vue!!!'
+          },
+          computed: {
+            pesanTerbalik: function() {
+              return this.pesan.split('').reverse().join('')
+            }
+          },
+        })
+        Vue.directive('focus', {
+            inserted: function(el) {
+                el.focus()
+            },
+            directive: {
+            focus: {
+                inserted: function(el) {
+                    el.focus()
+                }
+            }
+        }
+        })
+    </script>
+</body>
+</html>

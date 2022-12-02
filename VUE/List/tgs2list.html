@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas List 2 || Azizi</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <ul id="v-for-object" class="demo1" style="float: right;">
+        <li v-for="value in object">
+            {{ value }}
+            <hr>
+        </li>
+    </ul>
+    <script>
+        new Vue({
+            el: '#v-for-object',
+            data: {
+                object: {
+                    name: 'How to do list in Vue',
+                    place: 'Jane Dhoe',
+                    born: ' 2016-04-10',
+                    addres:'Jl. Binus Raya no 99',
+                }
+            }
+        })
+    </script>
+</body>
+</html>

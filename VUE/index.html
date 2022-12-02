@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="z">
+      <h1 v-if="awe">Vue is awesome</h1>
+      <h1 v-else>Oh no</h1>
+    </div>
+    <div id="x">
+      <div v-if="Math.random() > 0.5">
+        Now you see me
+      </div>
+      <div v-else>
+        Now you don't
+      </div>
+    </div>
+    <div id="y">
+      <div v-if="type === 'A'">
+        A
+      </div>
+      <div v-else-if="type === 'B'">
+        B
+      </div>
+      <div v-else-if="type === 'C'">
+        C
+      </div>
+      <div v-else>
+        Not A/B/C
+      </div>
+    </div>
+
+      <template v-if="ok">
+        <h1>Title</h1>
+        <h1>Paragraf 1</h1>
+      </template>
+    <div id="dw">
+      <p>Hasil {{ a }} + {{ b }} = {{ hasil }}</p>
+      <p>Hasil {{ a }} - {{ b }} = {{ hasil2 }}</p>
+      <p>Hasil {{ a }} x {{ b }} = {{ hasil3 }}</p>
+      <p>Hasil {{ a }} / {{ b }} = {{ hasil4 }}</p>
+      <!-- <p>Total = {{ hasil }}</p> -->
+    </div>
+    <div id="ex">
+      <p>Original Message = "{{ message }}"</p>
+      <p>Reverse Message = "{{ reverseMessage }}"</p>
+    </div>
+    <div id="app-7">
+      <input type="text" v-model="nama">
+      <template-baru :nama="nama" :umur="umur" :kelas="kelas" :sekolah="sekolah"></template-baru>
+    </div>
+    <template id="post-template">
+      <div>
+        <ul>
+          <li>{{ nama }}</li>
+          <li>{{ umur }}</li>
+          <li>{{ kelas }}</li>
+          <li>{{ sekolah}}</li>
+        </ul>
+      </div>
+    </template>
+    <div id="app">
+        {{ message }}
+      </div>
+      <div id="app-3">
+        <span v-if="seen">Azizi Khoiri U.F.</span>
+      </div>
+      <div id="app-4">
+        <span v-if="seen">Jl. Bumi Allah</span>
+      </div>
+      <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+      </div>      
+      <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+      </div>
+
+    
+      <script type="text/javascript">
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello World!'
+            }
+        })
+        var app3 = new Vue({
+            el: '#app-3',
+            data: {
+            seen: true
+            }
+        })
+        var app4 = new Vue({
+            el: '#app-4',
+            data: {
+            seen: false
+            }
+        })
+        var app5 = new Vue({
+        el: '#app-5',
+        data: {
+            message: 'Hello Vue.js!'
+        },
+        methods: {
+            reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('')
+            }
+        }
+        })
+        var app6 = new Vue({
+          el: '#app-6',
+          data: {
+            message: 'Hello Vue!'
+          }
+        })
+        Vue.component('template-baru', {
+          template: '#post-template',
+          props: ['nama', 'umur', 'kelas', 'sekolah']
+        });
+        var vo = new Vue({
+          el: '#app-7',
+          data: {
+            nama: 'Rizal',
+            umur: 17,
+            kelas: 'X-TKJ2',
+            sekolah: 'SMK Bina Nusantara'
+          }
+        })
+
+        var vm = new Vue({
+          el: '#ex',
+          data: {
+            message: 'Hello'
+          },
+          computed: {
+            reverseMessage: function() {
+              return this.message.split('').reverse().join('')
+            }
+          }
+        })
+        vm.message = 'Hello'
+        console.log(vm.reverseMessage);
+        new Vue({
+          el: '#dw',
+          data: {
+            a: 1,
+            b: 15
+          }, computed: {
+            hasil: function() {
+              return this.a + this.b
+            },
+            hasil2: function() {
+              return this.a - this.b
+            }, 
+            hasil3: function() {
+              return this.a * this.b
+            },
+            hasil4: function() {
+              return this.a / this.b
+            }
+          },
+        })
+
+        var z = new Vue({
+            el: '#z',
+            data: {
+            awe: true
+            }
+        })
+        var x = new Vue({
+            el: '#x',
+            data: {
+              
+            }
+        })
+        var y = new Vue({
+            el: '#y',
+            data: {
+            type: 'E'
+            }
+        })
+      </script>
+</body>
+</html>

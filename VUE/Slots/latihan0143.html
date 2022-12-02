@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan Vue 014 || 3</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app">
+        <div class="jumbotron text-center">
+            <h1>Bootstrap 4</h1>x
+            <p>Latihan014 - Penggunaan Slot, Named Slots dan Scoped Slots pada Vue.js</p>
+          </div>
+        <div class="container">
+
+            <!-- Penggunaan Slot (Biasa) -->
+
+            <!-- <div class="row">
+
+                <div class="col-md-6">
+                    <contoh-slot-biasa nama="Varian Hermianto" whatsapp="08-222-666-777-8">
+                    </contoh-slot-biasa>
+                </div>
+
+                <div class="col-md-6">
+                    <contoh-slot-biasa nama="Varian Hermianto" whatsapp="08-222-666-777-8">
+                        Juventini yang kada-kadang Hala Madrid.
+                    </contoh-slot-biasa>
+                </div>
+
+            </div> -->
+
+            <!-- Penggunaan Named Slots -->
+
+            <!-- <div class="row">
+
+                <div class="col-md-6">
+                    <contoh-named-slots>
+                        <template slot="nama"></template>
+                        <p class="card-text" slot="whatsapp"></p>
+                    </contoh-named-slots>
+                </div>
+
+                <div class="col-md-6">
+                    <contoh-named-slots>
+                        <template slot="nama">
+                            <u><i>Varian Hermianto</i></u>
+                        </template>
+                        Juventini yang kada-kadang <u><i>Hala Madrid</i></u>.
+                        <p class="card-text" slot="whatsapp">
+                            <strong>Kontak WA :</strong> 08-222-666-777-8
+                        </p>
+                    </contoh-named-slots>
+                </div>
+
+            </div> -->
+
+            <!-- Penggunaan Scoped Slots -->
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <contoh-scoped-slots nama="Varian Hermianto">
+                        <template slot-scope="dataDariKomponen">
+                        </template>
+                    </contoh-scoped-slots>
+                </div>
+                
+                <div class="col-md-6">
+                    <contoh-scoped-slots nama="Varian Hermianto">
+                        <template slot-scope="dataDariKomponen">
+                            <p class="card-text">Contoh Scoped Slots</p>
+                            <hr/>
+                            <h4 class="card-title">
+                                {{ dataDariKomponen.namaProgrammer }}
+                            </h4>
+                            <p class="card-text">
+                                {{ dataDariKomponen.deskripsiProgrammer }}
+                            </p>
+                            <hr/>
+                            <p class="card-text">
+                                <strong>Kontak WA :</strong> {{ dataDariKomponen.waProgrammer }}
+                            </p>
+                        </template>
+                    </contoh-scoped-slots>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script src="latihan0143.js"></script>
+</body>
+</html>

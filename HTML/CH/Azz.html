@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .foto {
+            position: relative;
+            width: 100%;
+        }
+
+        .col {
+            float: left;
+            width: 120px;
+            margin-top: 6px;
+        }
+
+        .tik {
+            float: left;
+            width: 1%;
+            margin-top: 6px;
+        }
+
+        .isi {
+            float: left;
+            width: 85%;
+            margin-top: 6px;
+        }
+
+        .aly {
+            float: left;
+            width: 250px;
+            margin-top: 6px;
+        }
+
+        .izi {
+            float: left;
+            width: 73%;
+            margin-top: 6px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            font-family: Arial;
+            background-color: orange;
+        }
+
+        p.gar {
+            border-bottom: solid;
+            border-width: 4px;
+            margin-top: 0px;
+        }
+
+        p.pil {
+            margin-top: 0px;
+        }
+
+        div.relative {
+            position: absolute;
+            right: 16px;
+            width: 95px;
+            height: 100px;
+            border: groove black;
+            border-width: 1px;
+            margin-top: -50px;
+            text-align: center;
+        }
+
+        /* CSS */
+        #a {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* italic bold 15px/30px Georgia, serif */
+        #b {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 15px;
+        }
+
+        #biru {
+            border-color: blue;
+        }
+
+        #kuni{
+            border-color: yellow;
+        }
+
+        #cok {
+            border-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a">
+        <p><b>PT. EXCELLENT</b><br>
+            Jl. Kembang Permai II Blok I 5 No.6<br>
+            Puri Indah, Jakarta Barat 11610<br>
+            &#9742; 021-93397876,5805352<br>
+            Fax 021-5805352, E-mail: excellent@cbn.net.id
+        </p>
+    </div>
+    <hr style="border-top: double;">
+    <h2 style="text-align: center; color: red;"><u>FORMULIR PENDAFTARAN</u></h2>
+    <div class="foto">
+        <div class="relative">
+            <img src="pro.jpeg" alt="">
+        </div>
+    </div>
+    <ol type="I" style="margin-top:90px;">
+        <li><b>KETERANGAN PRIBADI</b></li>
+        <div class="container">
+            <ol style="list-style-type: decimal-leading-zero;">
+                <div class="row">
+                    <div class="col" id="b">
+                        <b>
+                            <li>Nama Legkap</li>
+                        </b>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar" id="biru">&ensp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li>Nama Panggilan</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar" id="biru">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li>Jenis Kelamin</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="pil">(Laki-laki/Perempuan)*</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li>Tempat Lahir</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar" id="kuni">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li>Tanggal Lahir</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar" id="biru">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li>Agama</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="pil">(Islam/
+                            <s>Katholik/</s>
+                            <s>Kristen/</s>
+                            <s>Buddha/</s>
+                            <s>Hindu</s>)*</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li><i>
+                           <b>Kewarnegaraan</b>
+                        </i></li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar" id="kuni">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li>Anak ke</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar" id="kuni">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="color: gray;">
+                        <li>Jumlah Saudara</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar" id="biru">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li>Status</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="pil">(Kawin/Belum Kawin)*</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li><i>
+                            <b>Jenis SIM</b>
+                        </i></li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar" id="cok">&emsp;</p>
+                    </div>
+                </div>
+            </ol>
+            <p style="margin-left: 15px;"><i>Keterangan:&emsp;&emsp;&emsp;
+                    (*)Coret yang tidak perlu.</i></p>
+        </div>
+        <li><b>KETERANGAN TEMPAT TINGGAL</b></li>
+        <div class="container">
+            <ol style="list-style-type: decimal-leading-zero;">
+                <div class="row" style="color: brown;">
+                    <div class="col">
+                        <li>Alamat Lengkap</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row" style="color: brown;">
+                    <div class="col">
+                        <p>&emsp;</p>
+                    </div>
+                    <div class="tik">&ensp;</div>
+                    <div class="isi">
+                        <p class="gar">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>&emsp;</p>
+                    </div>
+                    <div class="tik">&ensp;</div>
+                    <div class="isi">
+                        <p class="gar" style="margin-top: -10px;" id="biru">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li>No.KTP</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar" id="biru">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li>No.Tlp/HP</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar" id="biru">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="aly">
+                        <li> 
+                            <span style="color: purple;">Alamat Lain</span>
+                            <span style="background-color: pink;"> yang dapat dihubungi</span>
+                        </li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="izi">
+                        <p class="gar" id="biru">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>&emsp;</p>
+                    </div>
+                    <div class="tik">&ensp;</div>
+                    <div class="isi">
+                        <p class="gar" id="biru">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>&emsp;</p>
+                    </div>
+                    <div class="tik">&ensp;</div>
+                    <div class="isi">
+                        <p class="gar" style="margin-top: -10px;" id="biru">&emsp;</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <li>No.Tlp/HP lain</li>
+                    </div>
+                    <div class="tik">:</div>
+                    <div class="isi">
+                        <p class="gar" id="biru">&emsp;</p>
+                    </div>
+                </div>
+            </ol>
+        </div>
+    </ol>
+    <!-- Content -->
+    <!-- <ol type="I">
+        <li><b>KETERANGAN PRIBADI</b></li><br>
+        <ol class="li">
+            <li>Nama Lengkap   : ____________________________________</li><br>
+            <li>Nama Panggilan : ____________________________________</li><br>
+            <li>Jenis Kelamin  : (Laki - Laki / Perempuan)*          </li><br>
+            <li>Tempat Lahir   : ____________________________________</li><br>
+            <li>Taggal Lahir   : ____________________________________</li><br>
+            <li>Agama          : (Islam / Katholik / Kristen / Buddha / Hindu)* </li><br>
+            <li>Kewarganegaraan: ____________________________________</li><br>
+            <li>Anak ke        : ____________________________________</li><br>
+            <li>Jumlah saudara : ____________________________________</li><br>
+            <li>Status         : (Kawin / Belum Kawin)*              </li><br>
+            <li>Jenis SIM      : ____________________________________</li>
+            <p><i>Keterangan   : (*)Coret yang tidak perlu.</i></p><br>
+        </ol><br>
+
+        <li><b>KETERANGAN TEMPAT TINGGAL</b></li><br>
+        <ol class="li">
+            <li>Alamat Lengkap : ____________________________________</li><br>
+            <li>No. KTP        : ____________________________________</li><br>
+            <li>No. Tlp / HP   : ____________________________________</li><br>
+            <li>Alamat Lain yang dapat dihubungi : ____________________________________</li><br>
+            <li>No. Tlp / HP lain : ____________________________________</li><br>
+        </ol>
+    </ol> -->
+</body>
+
+</html>

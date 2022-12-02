@@ -1,0 +1,10 @@
+{
+    "database": {
+        "host": "localhost",
+        "port": 3366,
+        "user": "root",
+        "password": "",
+        "database": "db_karyawan"
+    },
+    "secret": "verifikasi toke jwt, ganti dengan secret sendiri, bisa string"
+}

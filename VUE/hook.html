@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <!-- <ol id="ex" type="I" start="999">
+        <li v-for="item in items" :key="item.message">
+            {{ item.message[0] }}
+        </li>
+    </ol>
+    <ul id="v" class="demo">
+        <li v-for="value in object">
+            {{ value }}
+        </li>
+    </ul>
+    <ul id="dis" class="demo">
+        <li v-for="n in evenNumbers">
+            {{ n }}
+        </li>
+    </ul>
+    <ul id="display" class="demo">
+        <ul v-for="set in sets">
+            <li v-for="n in even(set)">            
+                {{ n }}
+            </li>
+        </ul>
+    </ul>
+    <ul id="ran" class="demo">
+        <div>
+            <span v-for="n in 10">{{ n }}</span>
+        </div>
+    </ul> -->
+    <div id="ol">
+        <h1>{{ message }}</h1>
+        <button @click="pre">Nice Try!</button>
+    </div><br>
+
+    <div id="x">
+        <input v-model.trim="msg"><br>
+        <p>{{ msg }}</p><br>
+        <input v-model.number="msg1" type="number"><br>
+        <p>{{ msg1 }}</p><br>
+        <input v-model.lazy="msg2"><br>
+        <p>{{ msg2 }}</p><br>
+    </div>
+    
+    <script>
+        Vue.mixin({
+            created() {
+                console.log('mixins css');
+            },
+        })
+
+        const myMixin = {
+            data() {
+                return {
+                    message: 'Ini dari mixin'
+                }
+            },
+            methods: {
+                pre() {
+                    alert("Hello Everyone")
+                }
+            },
+        }
+
+        const val = new Vue({
+            el: "#ol",
+            mixins:[myMixin],
+            data() {
+                return {
+                    message: 'Root Vue Insatance'
+                }
+            },
+        })
+
+        new Vue({
+            el: "#x",
+            data: {
+                msg: '',
+                msg1: '',
+                msg2: ''
+            }
+        })
+        // var ex = new Vue({
+        //     el: '#ex',
+        //     data: {
+        //         items: [
+        //             { message: 'Rum'},
+        //             { message: 'Umy'},
+        //             { message: 'Mys'},
+        //             { message: 'Ash'},
+        //             { message: 'Ysa'}
+        //         ]
+        //     }
+        // })
+        // new Vue({
+        //     el: '#v',
+        //     data: {
+        //         object: {
+        //             title: 'Azizi Khoiri 999',
+        //             author: 'Semarang',
+        //             publishedAt: '2006-03-20'
+        //         }
+        //     }
+        // })
+        // new Vue({
+        //     el: '#dis',
+        //     data: {
+        //         numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+        //     },
+        //     computed: {
+        //         evenNumbers: function () {
+        //         return this.numbers.filter(function (number) {
+        //             return number % 3 <= 0
+        //         })
+        //       }
+        //     }
+        // })
+        // new Vue({
+        //     el: '#display',
+        //     data: {
+        //         sets: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15,], [16, 17, 18, 19, 20]]
+        //     },
+        //     methods: {
+        //         even: function (numbers) {
+        //         return numbers.filter(function (number) {
+        //             return number % 3 === 2
+        //         })
+        //       }
+        //     }
+        // })
+        // new Vue({
+        //     el: '#ran',
+        //     data: {
+
+        //     }
+        // })
+    </script>
+</body>
+</html>

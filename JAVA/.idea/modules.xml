@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/JAVA.iml" filepath="$PROJECT_DIR$/.idea/JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot/apicrud/apicrud.iml" filepath="$PROJECT_DIR$/spring-boot/apicrud/apicrud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot/balajarspring/balajarspring.iml" filepath="$PROJECT_DIR$/spring-boot/balajarspring/balajarspring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot/belajar-apache-maven/belajar-apache-maven.iml" filepath="$PROJECT_DIR$/spring-boot/belajar-apache-maven/belajar-apache-maven.iml" />
+    </modules>
+  </component>
+</project>

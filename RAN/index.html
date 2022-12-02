@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Random || Azizi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div id="app">
+            <header>
+                <div class="center">
+                    <img src="cod1.png" alt="Coding" @click="currentView='trim'" keep-alive>
+                    <span>
+                        <h2>4-week Camp<br>
+                            <h3 class="red small">2 days or week (8 session)</h3>
+                        </h2>
+                    </span>
+                </div>
+            </header>
+        <component :is="currentView" keep-alive></component>
+        </div>
+        <template id="trim-template">
+            <div id="x">
+                <section>
+                    <div class="box2">
+                        <h4>Concept-based Activities + Purposeful Projects:</h4>
+                        <input type="checkbox" id="a" value="9 Concepts" v-model="a"   @click="bruh = !bruh">
+                        <label for="a">9 Concepts</label><br>
+                        <input type="checkbox" id="a" value="9 Activities" v-model="a"   @click="bruh = !bruh">
+                        <label for="a">9 Activities</label><br>
+                        <input type="checkbox" id="a" value="9 Projects" v-model="a"   @click="bruh = !bruh">
+                        <label for="a">9 Projects</label><br>
+                    </div><br>
+                    <div class="box2">
+                        <h4>Meaningful Modules:</h4>
+                        <input type="radio" id="b" value="Coding Foundation" v-model="b"   @click="bruh = !bruh">
+                        <label for="b">Coding Foundation</label><br>
+                        <input type="radio" id="b" value="Computational Thinking" v-model="b"   @click="bruh = !bruh">
+                        <label for="b">Computational Thinking</label><br>
+                        <input type="radio" id="b" value="Game App Development" v-model="b"   @click="bruh = !bruh">
+                        <label for="b">Game App Development</label><br>
+                    </div><br>
+                    <div class="box2">
+                        <h4>Improvement Areas:</h4>
+                        <input type="checkbox" id="c" value="Design Thinking" v-model="c"   @click="bruh = !bruh">
+                        <label for="c">Design Thinking</label><br>
+                        <input type="checkbox" id="c" value="Creativity" v-model="c"   @click="bruh = !bruh">
+                        <label for="c">Creativity</label><br>
+                        <input type="checkbox" id="c" value="Critical Thinking" v-model="c"   @click="bruh = !bruh">
+                        <label for="c">Critical Thinking</label><br>
+                    </div><br>
+                    <div class="box2">
+                        <h4>Fundamental Focus:</h4>
+                        <input type="radio" id="d" value="Design Foundation" v-model="d" @click="bruh = !bruh">
+                        <label for="d">Design Foundation</label><br>
+                        <input type="radio" id="d" value="Game Development" v-model="d"   @click="bruh = !bruh">
+                        <label for="d">Game Development</label><br>
+                        <input type="radio" id="d" value="Computational Thinking" v-model="d"   @click="bruh = !bruh">
+                        <label for="d">Computational Thinking</label><br>
+                    </div><br>
+                    <div class="box2" id="e">
+                        <h4>Cybernetic Certification:</h4>
+                        <input type="checkbox" @click="seen = !seen">
+                        <label for="e">3-week Coding Foundation</label><br>
+                    </div><br>
+                </section>
+                <footer>
+                    <div class="box2" v-if="bruh">
+                            <p>Concept-based: {{ a }}</p>
+                            <p>Meaningful Modules: {{ b }}</p>
+                            <p>Improvement Areas: {{ c }}</p>
+                            <p>Fundamental Focus: {{ d }}</p>
+                    </div>
+                    <div v-if="seen">
+                        <br>
+                        <button class="btn btn1">Join Now</button>
+                    </div>
+                </footer>
+            </div>
+        </template>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

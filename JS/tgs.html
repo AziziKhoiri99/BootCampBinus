@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Operasi Matematika</title>
+</head>
+<body>
+    <!-- <h4>Operasi berdasarkan Matematika</h4>
+    <ol>
+        <li>Perkalian</li>
+        <ul>
+            <li id="a"></li>
+            <li id="b"></li>
+            <li id="c"></li>
+        </ul>
+        <li>Pembagian</li>
+        <ul>
+            <li id="d"></li>
+            <li id="e"></li>
+            <li id="f"></li>        
+        </ul>
+        <li>Pertambahan</li>
+        <ul>
+            <li id="g"></li>
+            <li id="h"></li>
+            <li id="i"></li>
+        </ul>
+        <li>Pengurangan</li>
+        <ul>
+            <li id="j"></li>
+            <li id="k"></li>
+            <li id="l"></li>
+        </ul>
+    </ol> -->
+    <h4>Urutan Operasi Dengan Jenis Variabel</h4>
+    <ol>
+        <li>Var</li>
+        <ul>
+            <li id="a"></li>
+            <li id="d"></li>
+            <li id="g"></li>
+            <li id="j"></li>
+        </ul>
+        <li>Let</li>
+        <ul>
+            <li id="b"></li>
+            <li id="e"></li>
+            <li id="h"></li>
+            <li id="k"></li>
+        </ul>
+        <li>Const</li>
+        <ul>
+            <li id="c"></li>
+            <li id="f"></li>
+            <li id="i"></li>
+            <li id="l"></li>
+        </ul>
+    </ol>
+    <script>
+        let que = confirm("Apakah Kalian Siap Menerima Materi Lanjutan Dari Bootcamp Dan Tes Logic ?")
+        let ans = que ? "Hari Jumat Tes Logic": "Kalian Tidak Lulus Tes Ini";
+        document.write(ans);
+
+        var ajg = 40, bab = 30, cvk = 70,
+        vir = ajg * bab * cvk,
+        vir2 = ajg / bab / cvk,
+        vir3 = ajg + bab + cvk,
+        vir4 = ajg - bab - cvk;
+        
+        let don = 40, eek = 30, far = 70;
+        let lit = don * eek * far;
+        let lit2 = don / eek / far;
+        let lit3 = don + eek + far;
+        let lit4 = don - eek - far;
+        
+        const gus = 40, has = 30, idi = 70,
+        con = gus * has * idi,
+        con2 = gus / has / idi,
+        con3 = gus + has + idi,
+        con4 = gus - has - idi;
+
+        document.getElementById("a").innerHTML = vir;
+        document.getElementById("b").innerHTML = lit;
+        document.getElementById("c").innerHTML = con;
+
+        document.getElementById("d").innerHTML = vir2;
+        document.getElementById("e").innerHTML = lit2;
+        document.getElementById("f").innerHTML = con2;
+
+        document.getElementById("g").innerHTML = vir3;
+        document.getElementById("h").innerHTML = lit3;
+        document.getElementById("i").innerHTML = con3;
+
+        document.getElementById("j").innerHTML = vir4;
+        document.getElementById("k").innerHTML = lit4;
+        document.getElementById("l").innerHTML = con4;
+    </script>
+</body>
+</html>

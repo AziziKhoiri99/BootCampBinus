@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Vue || Azizi</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<style>
+    .box {
+        background: lightblue;
+        width: 25rem;
+        aspect-ratio: 1 / 1;
+        margin: auto;
+        border-radius: 5%; 
+        text-align: center;
+        margin-top: 50px;
+    }
+    h3 {
+        padding-top: 100px;
+    }
+    p {
+        color: red
+    }
+    input{
+        width: 15rem;
+        text-align: center;
+        height: 40px;
+        border-radius: 15px;
+        border: none
+    }
+    header {
+        width: 100%;
+        background-color: red;
+    }
+    footer {
+        width: 100%;
+        color: white;
+        background-color: black;
+    }
+</style>
+<body>
+    <header>
+        <h2>Navbar</h2>
+    </header>
+    <div id="dynamicexample">
+        <img src="https://cdn.idntimes.com/content-images/community/2021/09/1148698-0b6b34e106ca27a8d0622e80aeecf689-745109ebb90070aa9b915aa03a413196.jpg" 
+            alt="" width="150px" v-pin:[direction]="200">
+    </div>
+    <div class="box" id="c">
+        <h3>Selamat Datang di Aplikasi Reverse Kata</h3>
+        <p>{{ pesanTerbalik }}</p>
+        <input v-model="pesan" v-focus>
+    </div>
+    <footer>
+        <h2>Footer</h2> 
+    </footer>
+    <script>
+        var c = new Vue({
+          el: '#c',
+          data: {
+            pesan: 'Hello Vue!!!'
+          },
+          computed: {
+            pesanTerbalik: function() {
+              return this.pesan.split('').reverse().join('')
+            }
+          },
+        })
+        Vue.directive('pin', {
+            bind: function (el, binding, vnode) {
+                el.style.position = 'fixed'
+                var s = (binding.arg == 'right' ? 'right' : 'top')
+                el.style[s] = binding.value + 'px'
+            }
+        })
+
+        new Vue({
+            el: '#dynamicexample',
+            data: function () {
+                return {
+                    direction: 'right'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

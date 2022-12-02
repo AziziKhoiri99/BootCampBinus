@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homura</title>
+</head>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
+    .bitch {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+    
+    .thot {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+    
+    /* Clear floats after the columns */
+    .alone:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .bitch, .thot {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+    </style>
+
+<body>
+    <h2>Responsive Form</h2>
+    <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+    
+    <div class="container">
+      <form>
+        <div class="alone">
+          <div class="bitch">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="thot">
+            <input type="text" id="fname" name="firstname" placeholder="Your Name..">
+          </div>
+        </div>
+        <div class="alone">
+          <div class="bitch">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="thot">
+            <input type="text" id="lname" name="lastname" placeholder="Your Last Name..">
+          </div>
+        </div>
+        <div class="alone">
+          <div class="bitch">
+            <label for="mat">Mata Pelajaran</label>
+          </div>
+          <div class="thot">
+            <select id="mat" name="mat">
+                <option value="fis">Fisika</option>
+                <option value="kim">Kimia</option>
+                <option value="bio">Biologi</option>
+            </select>
+          </div>
+        </div>
+        <div class="alone">
+          <div class="bitch">
+            <label for="sub">Subject</label>
+          </div>
+          <div class="thot">
+            <textarea id="sub" name="sub" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    </body>
+</html>

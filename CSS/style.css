@@ -1,0 +1,29 @@
+body {
+    background-image: url("156588.jpg");
+    background-size: cover;
+}
+
+h1 {
+    width: 70%;
+    border-bottom: 2px solid #0004ff;
+    background: green;  
+}
+
+div {
+    background-color: lightblue;
+    border: 1px solid black;
+    margin: 100px 150px 100px 80px;
+}
+
+p {
+    background-color: yellow;
+}
+/* .bor1 {
+    border-color: tomato;
+}
+.bor2 {
+    border-color: dodgerblue;
+}
+.bor3 {
+    border-color: violet;
+} */
